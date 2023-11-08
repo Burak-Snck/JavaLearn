@@ -1,0 +1,24 @@
+ /* str bir String'dir.
+        Eğer String Orange'ye eşit ise ve uzunluğu 6'ya eşit ise "Orange has six letters" yazdırınız.
+        Eğer String Apple'ye eşit ise ve uzunluğu 5'ya eşit ise "Apple has five letters" yazdırınız.
+        Eğer String Orange'yi kapsıyorsa ve uzunluğu 10'dan fazla ise
+        "String contain orange and length is more then 10" yazdırınız.
+        Not: Uzunluk derken ingilizcedeki "length" yani karakter sayısından bahsediliyor.  */
+​
+        Scanner scan = new Scanner(System.in);
+​
+        String str = scan.nextLine();
+​
+        //Kodu aşağıya yazınız. BU SATIRIN YUKARISINI DEĞİŞTİRMEYİNİZ.
+​
+
+
+jjjjjşooooooooooooooooo
+lhhhhhhhhhhhhhh
+  /* Task->
+        a) Son basamak 5 ‘e esit ve 5 den buyukse, yuvarlama islemi: “Son basamağı bir üst ondalığa yuvarla”
+        b) Son basamak 5 den kucukse, yuvarlama islemi: “Son basamagi bir alt ondaliga yuvarla”
+         */
+         jenflllllflvldlvvd
+
+
