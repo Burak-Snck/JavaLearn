@@ -11,5 +11,10 @@ public class de {
         int d =-35;
         int g=-8;
         System.out.println( d %g);
+        int a;
+      String ba="";
+
+
+
     }
 }
