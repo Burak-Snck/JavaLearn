@@ -12,7 +12,24 @@ public class Q01_CountsOfCharactersWithArray {
     */
    public static void main(String[] args) {
 
+Scanner input=new Scanner (System.in);
+      System.out.println(  "bir metin git");
+      String  str=input.nextLine();
+      String arr[]=str.split("");
+      System.out.println(Arrays.toString(arr));
 
-
+      String output="";
+      for(int i=0; i<arr.length; i++){
+         int  count=0;
+         for(int j=0; j<arr.length; j++){
+            if(arr[i].equals(arr[j])){
+             count++;
+            }
+         }
+         if(output.contains(arr[i])){
+           output+=arr[i]+"="+count+" ,";
+         }
+      }
+       System.out.println(output);
    }
 }

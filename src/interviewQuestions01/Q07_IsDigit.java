@@ -17,6 +17,7 @@ public class Q07_IsDigit {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("metin gir");
 
 
 

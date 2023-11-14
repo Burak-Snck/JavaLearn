@@ -11,7 +11,12 @@ public class Q08_ArmstrongNumber {
 
           */
     public static void main(String[] args) {
+        Scanner input=new Scanner (System.in);
+        int sayı=input.nextInt();
+        int sayıkuptoplam=0;
+        int girilen=sayı;
 
+       
 
     }
 }
