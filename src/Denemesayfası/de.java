@@ -1,20 +1,22 @@
 package Denemesayfası;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class de {
+
     public static void main(String[] args) {
+             /*
+        Task ->  girilen bir sayı ile girilen String'lerin en uzun harf sayısını çarpıp print eden METHOD create ediniz.
+         */
 
-        int d =-35;
-        int g=-8;
-        System.out.println( d %g);
-        int a;
-      String ba="";
-
+        int sayi1 = 7;
+        String str1 = "sefil javacı Haluk";//
+        String str2 = "perfect javacı Abdulhamit";//
+        String str3 = "beleştepe muhtarı CEREN";//
 
 
     }
 }
+
+
+

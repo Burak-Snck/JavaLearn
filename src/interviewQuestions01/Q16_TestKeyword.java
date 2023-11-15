@@ -37,8 +37,20 @@ public class Q16_TestKeyword {
                 {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'}};
 
         char[] cevapAnahtari = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
-
+        testPuanHasapla(ogrecCevap,cevapAnahtari);
 
 
     }//main sonu
+
+    private static void testPuanHasapla(char[][] ogrecCevap, char[] cevapAnahtari) {
+        for (int i = 0; i < ogrecCevap.length; i++) {
+            int puan=0;
+            for (int j = 0; j < ogrecCevap[i].length; j++) {
+                if (ogrecCevap[i][j]==cevapAnahtari[j]){
+                    puan++;
+                }
+            }
+            System.out.println((i+1)+".ogrencinin puani= "+puan);
+        }
+    }
 }//Class sonu

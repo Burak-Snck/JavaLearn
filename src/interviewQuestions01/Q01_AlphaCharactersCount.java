@@ -20,7 +20,6 @@ public class    Q01_AlphaCharactersCount {
 
         System.out.println(str.replaceAll("[^a-zA-Z]","").length());
 
-
 /*
 
 

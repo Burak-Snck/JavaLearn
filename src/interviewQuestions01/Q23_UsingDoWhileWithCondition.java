@@ -11,9 +11,6 @@ public class Q23_UsingDoWhileWithCondition {
         değilse "Lost!" print eden code create ediniz.
     */
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-
 
     }
 }
