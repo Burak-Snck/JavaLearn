@@ -11,12 +11,17 @@ public class Q08_ArmstrongNumber {
 
           */
     public static void main(String[] args) {
-        Scanner input=new Scanner (System.in);
-        int sayı=input.nextInt();
-        int sayıkuptoplam=0;
-        int girilen=sayı;
-
-       
-
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Bir sayi giriniz");
+        int sayi= scan.nextInt();
+        int sayiKupuToplam=0;
+        int girilen=sayi;
+        while (sayi>0){
+            sayiKupuToplam+= (int) Math.pow(sayi%10,3);
+            sayi/=10;
+        }
+        if (sayiKupuToplam==girilen){
+            System.out.println("Girilen "+girilen+ " sayisi armstrong sayidir");
+        }else System.out.println("Girilen "+girilen+ " sayisi armstrong degildir");
     }
 }

@@ -17,9 +17,21 @@ public class Q07_IsDigit {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("metin gir");
-
+        System.out.println("Bir metin giriniz");
+        String str= input.nextLine();
+        System.out.println(sumOfDigit(str));
 
 
     }//main sonu
+
+    private static int sumOfDigit(String str) {
+        int toplam=0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isDigit(str.charAt(i))){
+                //toplam+=Integer.valueOf(str.charAt(i));
+                toplam+=Integer.valueOf(str.substring(i,i+1));
+            }
+        }
+        return toplam;
+    }
 }//Class sonu

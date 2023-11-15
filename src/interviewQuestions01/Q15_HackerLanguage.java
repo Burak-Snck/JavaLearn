@@ -28,11 +28,24 @@ public class Q15_HackerLanguage {
     }//main sonu
 
     private static void hackerDili1(String str) {
-
+        System.out.println(str.replaceAll("s","5")
+                .replaceAll("a","4")
+                .replaceAll("e","3")
+                .replaceAll("i","1")
+                .replaceAll("o","0"));
     }
 
     private static void hackerDili2(String str) {
-
+        String[] arr=str.split("");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals("s")){arr[i]="5";}
+            if (arr[i].equals("a")){arr[i]="4";}
+            if (arr[i].equals("e")){arr[i]="3";}
+            if (arr[i].equals("i")){arr[i]="1";}
+            if (arr[i].equals("o")){arr[i]="0";}
+            System.out.print(arr[i]);
+        }
+        //System.out.println(Arrays.toString(arr));
 
     }
 }// Class sonu

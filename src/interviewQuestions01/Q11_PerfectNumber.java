@@ -1,5 +1,7 @@
 package interviewQuestions01;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Q11_PerfectNumber {
@@ -15,8 +17,23 @@ public class Q11_PerfectNumber {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        System.out.println("Bir sayi giriniz");
+        int sayi= input.nextInt();
+        System.out.println(perfectNumber(sayi));
 
 
     }//main sonu
+
+    private static String perfectNumber(int sayi) {
+        int toplam=0;
+        List<Integer> list=new ArrayList<>();
+        for (int i = 1; i <sayi ; i++) {
+            if (sayi%i==0){
+                toplam+=i;
+                list.add(i);
+            }
+        }
+        System.out.println(list);
+        return toplam==sayi?sayi+" sayisi mukemmeldir":sayi+" sayisi mukemmel degildir";
+    }
 }//Class sonu
