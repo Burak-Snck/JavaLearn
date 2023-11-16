@@ -23,8 +23,17 @@ public class Q33_ListCollectionsMethodsTask {
 
 
     public static void main(String[] args) {
+        int sayi=1453;
+        System.out.println(tljMethod(sayi));
+        Integer yas=38;
+        System.out.println(tljMethod(yas));
 
+    }
 
-
+    private static int tljMethod(int sayi) {
+        return sayi*2;
+    }
+    private static int tljMethod(Integer yas) {
+        return yas*2;
     }
 }

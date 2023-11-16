@@ -5,17 +5,25 @@ import java.util.*;
 public class de {
 
     public static void main(String[] args) {
-             /*
-        Task ->  girilen bir sayı ile girilen String'lerin en uzun harf sayısını çarpıp print eden METHOD create ediniz.
-         */
+        int[] dizi = {4, 1, 9, 5, 7, 2};
 
-        int sayi1 = 7;
-        String str1 = "sefil javacı Haluk";//
-        String str2 = "perfect javacı Abdulhamit";//
-        String str3 = "beleştepe muhtarı CEREN";//
+        int min = dizi[0];
+        int max = dizi[0];
 
+        for (int eleman : dizi) {
+            if (eleman < min) {
+                min = eleman;
+            }
+            if (eleman > max) {
+                max = eleman;
+            }
+        }
 
+        System.out.println("Minimum: " + min);
+        System.out.println("Maximum: " + max);
     }
+
+
 }
 
 
