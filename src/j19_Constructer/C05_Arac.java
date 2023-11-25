@@ -5,6 +5,8 @@ public class C05_Arac {
     //Fields-> obj'nin uretilirken alacagı değer variables bir class'da bir den çok cons tanımlanabilir
     String model;
     int maxHiz;
+    boolean kaza;
+
 
     public C05_Arac() {//p'siz sefil const->Fakir muth.
 
@@ -32,10 +34,13 @@ public class C05_Arac {
         this.maxHiz = maxHiz;
         System.out.println("Agam bu yazıyı okuduysan Full p'li const call edilmiştir...");
     }
+
     @Override
     public String toString() {
-        return
+        return "C05_Arac{" +
                 "model='" + model + '\'' +
-                        ", maxHiz=" + maxHiz ;
+                ", maxHiz=" + maxHiz +
+                ", kaza=" + kaza +
+                '}';
     }
 }
