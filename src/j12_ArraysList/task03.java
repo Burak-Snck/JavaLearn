@@ -9,17 +9,24 @@ public class task03 {
         // Task ->  bir listte istenen sayının varlığı kontrol eden code create ediniz.
 
 
+ArrayList<Integer>adet = new ArrayList<Integer>(Arrays.asList(1,3,6,78,94,23,54,4,89,343));
 
 
 
-        ArrayList<Integer> sayiList=new ArrayList<>(Arrays.asList(1,3,6,78,94,23,54,4,89,34));
-        Scanner input=new Scanner(System.in);
-        System.out.println("aranacak sayı giriniz ");
-        int aranacak=input.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("hangi sayı kontol");
+        int s = scanner.nextInt();
+        for (int a:adet) {
+            if( a==s) {
+                System.out.println("istenen sayı listede var");
+                break;
+
+            }
 
 
-        System.out.println(sayiList.contains(aranacak) ? "aranan sayi listte mevcut" : "aranan sayı listte mevcut değil");
+        }
 
+         System.out.println("listede yok");
 
 
     }
