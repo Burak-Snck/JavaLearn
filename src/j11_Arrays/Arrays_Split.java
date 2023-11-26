@@ -13,8 +13,8 @@ public class Arrays_Split {
         System.out.println(str);
         System.out.println(Arrays.toString(strArr));
         System.out.println(strArr.length);//str nin eleman sayısı
-        String harfArr[]=str.replaceAll(" ","").split("");
-        System.out.println(harfArr);
+        String harfArr[]=str.replaceAll("a","ggggg").split(" ");
+        System.out.println(Arrays.toString( harfArr));
 
     }
 }

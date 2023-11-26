@@ -34,7 +34,7 @@ public class task18 {
         int sayı=input.nextInt();
 
 
-       sayilar.add(sayı);
+       sayilar.get(sayı);
         System.out.println(sayilar);
     }
 }

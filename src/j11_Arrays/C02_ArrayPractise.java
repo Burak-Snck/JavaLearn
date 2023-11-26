@@ -1,5 +1,7 @@
 package j11_Arrays;
 
+import java.util.Arrays;
+
 public class C02_ArrayPractise {
     public static void main(String[] args) {
 
@@ -36,14 +38,17 @@ public class C02_ArrayPractise {
             }
 
         }
-        String yeniArr[] =new String[yeniArrElemansayısı];
+        System.out.println(yeniArrElemansayısı);
+        String yeniArr[] =new String[3];
         int yeniArrindeks=0;
-       for(int i=0; i<isimArr.length; i++){
-           if (isimArr[i].length()<6){
-               yeniArr[yeniArrindeks]=isimArr[i];
-               yeniArrindeks++;
+        for (int i = 0; i < isimArr.length; i++) {
+            if (isimArr[i].length() < 6) {
+                yeniArr[yeniArrindeks] = isimArr[i];
+                yeniArrindeks++;
+            }
+        }
 
-           }
-       }
+        // Yeni diziyi ekrana yazdır
+        System.out.println(Arrays.toString(yeniArr));
     }
 }
