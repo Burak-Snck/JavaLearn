@@ -31,12 +31,12 @@ public class Kisi {
 
     @Override
     public String toString() {
-        return "Kisi{" +
+        return
                 "ad='" + ad + '\'' +
                 ", soyad='" + soyad + '\'' +
                 ", password='" + password + '\'' +
-                ", yas=" + yas +
-                '}';
+                ", yas=" + yas ;
+
     }
 
     public String getPassword() {
