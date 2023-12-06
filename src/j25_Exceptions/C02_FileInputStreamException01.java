@@ -1,5 +1,6 @@
 package j25_Exceptions;
 
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
@@ -26,8 +27,14 @@ public class C02_FileInputStreamException01 {
 
 
 
+
     public static void main(String[] args) throws FileNotFoundException {
         FileInputStream fis = new FileInputStream("src/j25_Exceptions/ebikgabık");
+
+
+
+
+
 
 
 
@@ -36,6 +43,9 @@ public class C02_FileInputStreamException01 {
 
 
 }
+
+
+
 
 
 
