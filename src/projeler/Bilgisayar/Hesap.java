@@ -1,6 +1,7 @@
 package projeler.Bilgisayar;
 
 public class Hesap {
+
     public int getRam(String ram) {
         int fiyatRam=0;
         switch (ram){
@@ -56,16 +57,14 @@ public class Hesap {
     }
 
     public int getSize(String boyut) {
-        int fiyatSize=0;
-        if (boyut.equalsIgnoreCase("Mini")){
-            fiyatSize+=100;
-        } else if (boyut.equalsIgnoreCase("Middle")) {
-            fiyatSize+=200;
-        } else if (boyut.equalsIgnoreCase("Max")) {
-            fiyatSize+=300;
-        }
-        return fiyatSize;
+      int fiyatSize=0;
+      if (boyut.equalsIgnoreCase("Mini")){
+          fiyatSize+=100;
+      } else if (boyut.equalsIgnoreCase("Middle")) {
+          fiyatSize+=200;
+      } else if (boyut.equalsIgnoreCase("Max")) {
+          fiyatSize+=300;
+      }
+      return fiyatSize;
     }
-
-
 }

@@ -1,9 +1,5 @@
 package projeler.Bilgisayar;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Data {
     static int laptoID = 1001;
     private String marka;

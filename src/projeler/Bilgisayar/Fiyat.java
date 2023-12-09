@@ -6,10 +6,9 @@ import java.util.Scanner;
 
 public class Fiyat {
     Scanner scan = new Scanner(System.in);
-    private static String adminUser = "admin";
-    private static String adminPass = "admin01";
     static List<Data> list = new ArrayList<>();
     static List<Integer> idList = new ArrayList<>();
+
     public void mainMenu() {
         System.out.println("*****Ana Menu******");
         try {
@@ -22,16 +21,20 @@ public class Fiyat {
                 if (secim == 1) {
                     System.out.println("Kullanici adinizi giriniz : ");
                     String admin = scan.next();
+                    String adminUser = "admin";
                     if (admin.equals(adminUser)) {
-                        System.out.println("Sifrenizi giriniz : ");
-                        String sifre = scan.next();
-                        if (sifre.equals(adminPass)) {
-                            System.out.println("Admin menuye yonlendiriliyorsunuz");
-                            Thread.sleep(2000);
-                            adminMenu();
-                        } else {
-                            System.out.println("Sifre yanlis");
-                            i--;
+                        for (int j = 0; j < 1; j++) {
+                            System.out.println("Sifrenizi giriniz : ");
+                            String sifre = scan.next();
+                            String adminPass = "admin01";
+                            if (sifre.equals(adminPass)) {
+                                System.out.println("Admin menuye yonlendiriliyorsunuz");
+                                Thread.sleep(2000);
+                                adminMenu();
+                            } else {
+                                System.out.println("Sifre yanlis");
+                                j--;
+                            }
                         }
                     } else {
                         System.out.println("Kullanici adi yanlis");
@@ -39,12 +42,7 @@ public class Fiyat {
                     }
                 } else if (secim==2) {
                     if (!list.isEmpty()){
-                        System.out.printf("%20s%20s%20s%20s%20s%20s%20s", "LaptopID", "Marka", "Model", "Ram", "CPU", "Boyut", "Color");
-                        for (int j = 0; j < list.size(); j++) {
-                            System.out.println();
-                            System.out.printf("%20s%20s%20s%20s%20s%20s%20s\n", idList.get(j), list.get(j).getMarka(),
-                                    list.get(j).getModel(), list.get(j).getRam(), list.get(j).getCpu(), list.get(j).getBoyut(), list.get(j).getColor());
-                        }
+                        printf();
                         System.out.println("Lutfen urun ID'si girerek bilgisayar seciniz");
                         int id=scan.nextInt();
                         if (idList.contains(id)){
@@ -81,9 +79,9 @@ public class Fiyat {
             int secim = scan.nextInt();
             scan.nextLine();
             if (secim == 1) bilgisayarEkleme();
-//            else if (secim == 2) bilgisayarSilme();
-//            else if (secim == 3) bilgsayarlariGoruntule();
-                //else if ( secim == 4) bilgisayarGuncelleme();
+            else if (secim == 2) bilgisayarSilme();
+            else if (secim == 3) bilgsayarlariGoruntule();
+            else if ( secim == 4) bilgisayarGuncelleme();
             else if (secim == 5) mainMenu();
             else if (secim == 6) System.out.println("\nÇıkış yaptnız.");
             else {
@@ -94,6 +92,102 @@ public class Fiyat {
             System.out.println("****Hatali Giris*****");
             scan.nextLine();
             adminMenu();
+        }
+    }
+
+    private void bilgisayarGuncelleme() {
+        printf();
+        System.out.println();
+        System.out.println("Guncellemek istediginiz bilgisayarin ID'sini giriniz : ");
+        int id=scan.nextInt();
+        try {
+            if (idList.contains(id)){
+                System.out.print("Guncellemek istediğiniz bilgisayarin markasini giriniz : ");
+                scan.nextLine();
+                String marka = scan.nextLine();
+                marka = marka.substring(0, 1).toUpperCase() + marka.substring(1).toLowerCase();
+                System.out.print("Guncellemek istediğiniz bilgisayarin modelini giriniz : ");
+                String model = scan.nextLine();
+                model = model.substring(0, 1).toUpperCase() + model.substring(1).toLowerCase();
+                System.out.print("Guncellemek istediğiniz bilgisayarin ram'ini giriniz : ");
+                String ram = scan.next().toLowerCase();
+                System.out.print("Guncellemek istediğiniz bilgisayarin cpu'sunu giriniz : ");
+                String cpu = scan.next().toLowerCase();
+                System.out.print("Guncellemek istediğiniz bilgisayarin boyutnu giriniz : ");
+                String boyut = scan.next();
+                boyut = boyut.substring(0, 1).toUpperCase() + boyut.substring(1).toLowerCase();
+                System.out.print("Guncellemek istediğiniz bilgisayarin rengini giriniz : ");
+                scan.nextLine();
+                String color = scan.next();
+                color = color.substring(0, 1).toUpperCase() + color.substring(1).toLowerCase();
+                Data data = new Data();
+                data.setMarka(marka);
+                data.setModel(model);
+                data.setRam(ram);
+                data.setCpu(cpu);
+                data.setBoyut(boyut);
+                data.setColor(color);
+                int index = idList.indexOf(id);
+                list.set(index,data);
+                System.out.println("Bilgisayar basariyla guncellendi.\nAdmin menuye yonlendiriliyorsunuz");
+                Thread.sleep(2000);
+                adminMenu();
+            }else {
+                System.out.println(id+" numarali bilgisayar kayitli degil");
+                adminMenu();
+            }
+
+        } catch (Exception e) {
+            System.out.println("****Hatali Giris*****");
+            scan.nextLine();
+            adminMenu();
+        }
+    }
+
+    private void bilgsayarlariGoruntule() {
+        try {
+            System.out.println("Bilgisayar listesi asagidadir\n");
+            printf();
+            System.out.println("Admin menuye yonlendiriliyorsunuz");
+            Thread.sleep(2000);
+            adminMenu();
+        }catch (Exception e){
+            System.out.println("****Hatali Giris*****");
+            scan.nextLine();
+            adminMenu();
+        }
+
+    }
+
+    private void bilgisayarSilme() {
+        printf();
+        try {
+            System.out.println("Lutfen silmek istediginiz urunun ID'sini giriniz : ");
+            int id=scan.nextInt();
+            if (idList.contains(id)){
+                int index=idList.indexOf(id);
+                Data data=list.remove(index);
+                idList.remove(index);
+                System.out.println(data+" Bilgisayari silindi\nAdmin menuye yonlendiriliyorsunuz");
+                Thread.sleep(2000);
+                adminMenu();
+            }else {
+                System.out.println(id+" numarali urun mevcut degil");
+                adminMenu();
+            }
+        }catch (Exception e){
+            System.out.println("****Hatali Giris*****");
+            scan.nextLine();
+            adminMenu();
+        }
+    }
+
+    private void printf() {
+        System.out.printf("%20s%20s%20s%20s%20s%20s%20s", "LaptopID", "Marka", "Model", "Ram", "CPU", "Boyut", "Color");
+        System.out.println();
+        for (int j = 0; j < list.size(); j++) {
+            System.out.printf("%20s%20s%20s%20s%20s%20s%20s\n", idList.get(j), list.get(j).getMarka(),
+                    list.get(j).getModel(), list.get(j).getRam(), list.get(j).getCpu(), list.get(j).getBoyut(), list.get(j).getColor());
         }
     }
 
@@ -148,5 +242,4 @@ public class Fiyat {
         return hesap.getRam(bilgiData.getRam())+hesap.getCPU(bilgiData.getCpu())+
                 hesap.getColor(bilgiData.getColor())+hesap.getSize(bilgiData.getBoyut());
     }
-
 }
