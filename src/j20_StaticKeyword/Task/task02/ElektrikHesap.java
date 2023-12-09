@@ -8,9 +8,10 @@ public class ElektrikHesap {
    double tuketimekle(int x) {
   return toplamtüketim+=x;
     }
-    double odenecektutar(){
-    fatura=toplamtüketim*oran;
-    return fatura;
+ double odenecektutar(){
+
+     return toplamtüketim * oran;
+
 
     }
 

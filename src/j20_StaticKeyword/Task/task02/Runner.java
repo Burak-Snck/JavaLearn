@@ -11,7 +11,7 @@ mst.elektrikHesap.tuketimekle(100);
 mst.elektrikHesap.tuketimekle(1000);
 
         System.out.println(mst.name + " " + mst.elektrikHesap.toplamtüketim);
-        System.out.println("ödenecek tutar  "+ mst.elektrikHesap.odenecektutar());
+        System.out.println( mst.elektrikHesap.odenecektutar());
 
 
     }
