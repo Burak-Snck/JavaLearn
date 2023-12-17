@@ -20,6 +20,6 @@ FİFO -> first in first out: Coll. ilk giren eleman ilk çıkar.Elemen en sona e
  */
 
         java.util.Queue<String> q1=new LinkedList<>(Arrays.asList("javaCAN","javVİDAN","jaVİYE","javaSU","javaHAN","javaZADE"));
-        TreeMap<Integer,String>
+
     }
 }

@@ -1,8 +1,6 @@
 package Denemesayfası;
 
-public class x {
-
-
+public class y {
     public static void main(String[] args) {
         try {
             checkAge(-3);
@@ -14,13 +12,9 @@ public class x {
 
     public static void checkAge(int age) {
         if (age < 0) {
-            throw new IllegalArgumentException("Yaş negatif olaaamaz");
+            throw new IllegalArgumentException("Yaş negatif olamaz");
         } else {
             System.out.println("Yaş negatif değil");
         }
-
-
     }
-
-
 }
