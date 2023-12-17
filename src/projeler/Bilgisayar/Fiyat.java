@@ -60,7 +60,7 @@ public class Fiyat {
                 }
             }
         } catch (Exception e) {
-            System.out.println("****Hatali Giris*****");
+            System.out.println("****Hatali Giris*********");
             scan.nextLine();
             mainMenu();
         }
