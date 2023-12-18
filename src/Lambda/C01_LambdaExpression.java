@@ -1,5 +1,9 @@
 package Lambda;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class C01_LambdaExpression {
 
 
@@ -33,9 +37,93 @@ public class C01_LambdaExpression {
             Ayrıca bunların nasıl yapabileceğine dair bilgiler de içerir.
             Örneğin hızlanmak için ayağınızı gaz pedalına koyup itersiniz.
             API, ayağınızı gaza bastığınızda motorun içinde neler olduğunu açıklamak zorunda değildir.
+
             Bu nedenle, içten yanmalı motorlu bir araba kullanmayı öğrendiyseniz, tamamen
             yeni bir dizi beceri öğrenmek zorunda kalmadan API sayesinde elektrikli bir arabayı rahatlıkla kullanabilirsiniz.
     */
+
+    public static void main(String[] args) {
+
+        List<Integer> sayılıst=new ArrayList<>(Arrays.asList(7,12,15,25,6,3,89,43,34,22,58,50,71,35));
+        System.out.println("****Task 01****");
+
+
+
+//task 01->  "Structured Programming"--> AMELE Programming kullanarak list
+// elemanlarını aynı satırda aralarında bosluk olacak şekilde print ediniz.
+
+     printelstructured(sayılıst);
+
+
+        System.out.println("****Task 02****");
+
+        //task 02->  "Functional Programming"--> CINCIX Programming
+        //
+        //
+        // kullanarak list elemanlarını aynı satırda aralarında bosluk olacak şekilde print ediniz.
+
+
+     printelfunctional(sayılıst);
+
+
+
+        System.out.println("****Task 03****");
+        System.out.println("****Task 04****");
+
+        printelfunctional1(sayılıst);
+
+
+
+
+    }
+
+    private static void printelfunctional1(List<Integer> sayılıst) {
+
+
+        sayılıst.stream().forEach(SeedMethods::intprintet);
+    }
+
+    private static void printelfunctional(List<Integer> sayılıst) {
+
+        sayılıst.stream().forEach((t)-> System.out.print(t+" "));
+
+        System.out.println( "Task 3");
+        sayılıst.stream().forEach(System.out::print);
+    }
+
+    private static void printelstructured(List<Integer> sayılıst) {
+        for (int a:sayılıst) {
+            System.out.print(a+" ");
+        }
+
+
+    }
+    /*
+        stream() : datalari yukaridan asagiya akis sekline getirir. Stream bir interface olduğundan dolayı doğrudan nesne almaz.
+        forEach() :datanin parametresine gore her bir elemanı isler
+        t-> : Lambda operatoru
+         Lambda Expression-->(parameter list) -> {action body}
+             Parameter list: Fonksiyonun parametreleri tanımlanır. Hiç parametre geçirmeden boşta olabilir.
+             -> Arrow-token: Argüman listesi(parameter list) ile expression gövdesini(action body) birbirine bağlamak için kullanılır.
+             Body: Expressionları ve statementları içerir.
+            Bir kod bloğundan oluşan bir body...
+            Bu tip lambda body, block body olarak bilinir. Blok gövdesi, lambda gövdesinin birden çok ifade içermesine izin verir.
+            Bu ifadeler parantez içine alınır ve parantezlerden sonra noktalı virgül eklemeniz gerekir.
+                () -> {
+                 double pi = 3.1415;
+                    return pi;
+                };
+       ahanda trick köşeşinde bugun :   Lambda Expression  yapisi cok tavsiye edilmez daha cok METHOD REFERENCE kullanilir
+        */
+
+
+
+
+
+
+
+
+
 
 
 
