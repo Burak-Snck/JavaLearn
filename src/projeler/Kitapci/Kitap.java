@@ -9,6 +9,10 @@ public class Kitap {
     private String yazar;
     private String fiyat;
 
+    public Kitap(String name, String yazar, int fiyat) {
+
+    }
+
     public String getName() {
         return name;
     }

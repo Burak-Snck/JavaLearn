@@ -28,7 +28,7 @@ public class Islemler {
         String yazar=TryCatch.stringGiris();
         System.out.println("Eklemek istediginiz kitabin fiyatini giriniz");
         int fiyat=TryCatch.intGiris();
-        Kitap kitap=new Kitap();
+        Kitap kitap=new Kitap(name ,yazar,fiyat );
         kitapList.add(kitap);
         kitapNoList.add(kitapNo);
         System.out.println(BOLD+c_CYAN+"Kitap basariyla eklendi"+c_RESET);
@@ -48,7 +48,7 @@ public class Islemler {
                 int index=kitapNoList.indexOf(no);
                 System.out.printf(BOLD + c_BLUE + "%20s%20s%20s%20s", "Kitap No", "Kitap Adı", "Yazar", "Fiyat" + c_RESET);
                 System.out.println();
-                System.out.printf("%20s%20s%20s%16s\n", no, kitapList.get(index).getName(),
+                System.out.printf("%20s%20s%20s%16s\n", no,kitapList.get(index).getName(),
                         kitapList.get(index).getYazar(), kitapList.get(index).getFiyat());
             }else {
                 System.out.println(BOLD+c_RED+"\nBu numarada bir kitap kayitli degil");
