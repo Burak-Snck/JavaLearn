@@ -28,4 +28,7 @@ public static int kareal(int a){
     public static int minbul(int x, int y){
         return x<y ?x:y;
     }
+
+    public static void stringPrint(Object o) {
+    }
 }
