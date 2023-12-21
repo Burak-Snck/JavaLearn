@@ -30,11 +30,19 @@ public class C06_Distinct {
         System.out.println("\n****Task03*****");
         printCharSayisiSiraTekrarsiz(yemahhh);
         System.out.println("\n****Task04*****");
+
         printSonCharTersSiraTekrarsiz(yemahhh);
+
+        System.out.println("Task 05 ********************************");
+        //listin elemanlarının çift sayılı karekterlerini b-> sıralı  tekrarsız
+
+
 
     }
 
     //Task01-> list elemanlarını alfabetik Buyuk harf ile tekrarsız print eden code create ediniz...
+
+
     public static void printBykAlfSiraTekrarsiz(List<String> yemahhh) {
         yemahhh
                 .stream()

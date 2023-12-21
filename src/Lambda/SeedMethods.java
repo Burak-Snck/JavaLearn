@@ -31,4 +31,9 @@ public static int kareal(int a){
 
     public static void stringPrint(Object o) {
     }
+
+    public static void intprintet(String s) {
+
+        System.out.print(s + " ");
+    }
 }

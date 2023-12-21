@@ -41,6 +41,8 @@ public class Islemler {
 
                     break;
                 case 3:
+                    urungirisi();
+                    yetkili();
                     break;
                 case 4:
                     break;
@@ -65,6 +67,29 @@ public class Islemler {
 
     }
 
+    private void urungirisi() {
+        System.out.println();
+        System.out.println( "Ürün ismini giriniz : ");
+        String isim=TryCatch.stringGirisi();
+        System.out.println("Üretici Giriniz : ");
+        String  üretici =TryCatch.stringGirisi();
+        System.out.println("Miktarı Giriniz : ");
+        int miktar=TryCatch.intGirisi();
+        System.out.println("BirimGiriniz : ");
+        String birim=TryCatch.stringGirisi();
+        System.out.println("Raf Giriniz : ");
+        String raf=TryCatch.stringGirisi();
+        Urunler urunler=new Urunler(  isim,  üretici, miktar,  birim,  raf);
+        Urunler.depodakiürünler.put(1003,urunler);
+
+
+
+
+
+
+
+    }
+
     public void urunlisteleme() {
         System.out.printf(BOLD + c_CYAN + "%-20s%-20s%-10s%-15s%-10s%-10s", "ID", "İsim", "Üretici", "Miktarı", "Birim", "Raf" + c_RESET);
         System.out.println();
@@ -72,11 +97,11 @@ public class Islemler {
             int id = değer.getKey();
             String isim = değer.getValue().getIsim();
             String üretici = değer.getValue().getÜretici();
-            int miktarı = değer.getValue().getMiktarı();
+            int miktar = değer.getValue().getMiktarı();
             String birim = değer.getValue().getBirim();
             String raf = değer.getValue().getRaf();
 
-            System.out.printf("%-20s%-20s%-10s%-15s%-10s%-10s", id, isim, üretici, miktarı, birim, raf);
+            System.out.printf("%-20s%-20s%-10s%-15s%-10s%-10s", id, isim, üretici, miktar, birim, raf);
             System.out.println();
         }
 
