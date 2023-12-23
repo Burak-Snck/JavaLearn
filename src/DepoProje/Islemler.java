@@ -3,7 +3,7 @@ package DepoProje;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Islemler {
+public class Islemler extends Urunler{
 
 
     static String c_CYAN = "\u001B[36m";
@@ -12,7 +12,7 @@ public class Islemler {
     static String c_RESET = "\u001B[0m";
     static String BOLD = "\033[0;1m";
     static String c_GREEN = "\u001B[32m";
-
+  static int ıd=1003;
     static Scanner scan = new Scanner(System.in);
 
     public void yetkili() {
@@ -37,7 +37,7 @@ public class Islemler {
                     break;
                 case 2:
                     urunlisteleme();
-                    yetkili();
+
 
                     break;
                 case 3:
@@ -45,10 +45,16 @@ public class Islemler {
                     yetkili();
                     break;
                 case 4:
+                    rafakoy();
+                    yetkili();
                     break;
                 case 5:
+                    urunçıkışı();
+                    yetkili();
                     break;
                 case 6:
+                    çıkış();
+
 
                     break;
                 case 7:
@@ -61,8 +67,44 @@ public class Islemler {
 
             }
         } catch (Exception e) {
-            System.out.println(c_RED + "****Hatali giris*****" + c_RESET);
+            System.out.println(c_RED + "****Hatali Giris*****" + c_RESET);
         }
+
+
+    }
+
+    private void çıkış() {
+        try {
+            System.out.print("Çıkış Yapılıyor ----İyi günler");
+
+            for (int i = 0; i < 3; i++) {
+                Thread.sleep(1000);
+                System.out.print(".");
+            }
+
+            System.out.println();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void urunçıkışı() {
+
+        System.out.println("Çıkarmak İstediğiniz Ürün ID gir");
+        int seçim=TryCatch.intGirisi();
+
+       if(Urunler.depodakiürünler.containsKey(seçim)){
+          Urunler silinen= Urunler.depodakiürünler.remove(seçim);
+           System.out.println(silinen + c_RED+" SİLİNDİ "+c_RESET);
+       }else {
+           System.out.println("Belirtilen anahtar değeri bulunamadı.");
+       }
+
+
+    }
+
+    private void rafakoy() {
+
 
 
     }
@@ -80,15 +122,17 @@ public class Islemler {
         System.out.println("Raf Giriniz : ");
         String raf=TryCatch.stringGirisi();
         Urunler urunler=new Urunler(  isim,  üretici, miktar,  birim,  raf);
-        Urunler.depodakiürünler.put(1003,urunler);
-
-
-
-
+        Urunler.depodakiürünler.put(ıd,urunler);
+      ıd++;
 
 
 
     }
+
+
+
+
+
 
     public void urunlisteleme() {
         System.out.printf(BOLD + c_CYAN + "%-20s%-20s%-10s%-15s%-10s%-10s", "ID", "İsim", "Üretici", "Miktarı", "Birim", "Raf" + c_RESET);
@@ -112,9 +156,9 @@ public class Islemler {
         String seçim = TryCatch.stringGirisi();
         int count=0;
 
-        for (Map.Entry<Integer, Urunler> entry : Urunler.depodakiürünler.entrySet()) {
-            if (entry.getValue().getIsim().equalsIgnoreCase(seçim)) {
-                System.out.println("Ürün ID: " + entry.getKey());
+        for (Map.Entry<Integer, Urunler> ürün : Urunler.depodakiürünler.entrySet()) {
+            if (ürün.getValue().getIsim().equalsIgnoreCase(seçim)) {
+                System.out.println("Ürün ID: " + ürün.getKey());
 
                 break;
             }
@@ -125,6 +169,24 @@ public class Islemler {
        if(count==Urunler.depodakiürünler.entrySet().size()) {
            System.out.println("Böyle Bir Ürün Bulunamadı");
        }
+    }
+
+    public void musteri() {
+        System.out.println("Müşeteri İşlem Menüsü");
+
+
+        System.out.println("Ürün Listeleme  1 ");
+        System.out.println("Ürün Girişi 3");
+        System.out.println("Ürünü Rafa Koy 4");
+        System.out.println("Ürün Çıkışı 5 ");
+        System.out.println("Çıkış 6 ");
+
+
+        System.out.print("\tSeçiminiz : " + c_RESET);
+        int secim = TryCatch.intGirisi();
+
+
+
     }
 }
 

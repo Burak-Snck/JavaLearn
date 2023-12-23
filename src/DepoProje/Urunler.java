@@ -30,7 +30,7 @@ public class Urunler  {
         this.raf = raf;
     }
 
-    public void ekleUrunler() {
+    public static void ekleUrunler() {
         Urunler urun = new Urunler("Portakal", "İsrail", 50, "Kasa", "A1");
         Urunler urun1 = new Urunler("Muz", "Türkiye", 34, "Kasa", "A1");
         Urunler urun3 = new Urunler("Patates", "Romanya", 99, "Çuval", "A2");
@@ -98,7 +98,7 @@ public class Urunler  {
     @Override
     public String toString() {
         return "Urunler"+
-                depodakiürünler+
+
                 ", isim='" + isim + '\'' +
                 ", üretici='" + üretici + '\'' +
                 ", miktarı=" + miktarı +

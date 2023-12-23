@@ -1,12 +1,9 @@
 package Lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
-public class C11_LambdaObject {
+public class C10_LambdaObject {
 
 
 /*
@@ -58,11 +55,71 @@ public class C11_LambdaObject {
         System.out.println(printOgrSayisiEnAz2(unv));
 
         System.out.println("Task 07");
+        //task07-> notOrt 63 'den buyuk olan universite'lerin ogrc sayilarini toplamini print eden code create ediniz...
+
+        System.out.println(printnotort63denbykögrsysytoplam(unv));
+
         System.out.println("Task 08");
+        //task08-> Ogrenci sayisi 333'dan buyuk olan universite'lerin notOrt'larinin ortalamasini print eden code create ediniz...
+        System.out.println(printogrsayısı333byknotort(unv));
+
+
         System.out.println("Task 09");
+        //task09-> "matematik" bolumlerinin sayisini  print eden code create ediniz...
+        System.out.println(printmatbolsayısı(unv));
+        System.out.println("Task 010");
+        //task10-> Ogrenci sayilari 571'dan fazla olan universite'lerin en buyuk notOrt'unu print eden code create ediniz...
+        System.out.println(yazdır(unv));
+
+        System.out.println("Task 011");
+        //task11-> Ogrenci sayilari 1071'dan az olan universite'lerin en kucuk notOrt'unu print eden code create ediniz.
+        //
+        // ..
+
+
 
 
     }
+
+    
+
+
+    public static OptionalInt yazdır(List<C10_University> unv){
+        return unv.stream()
+                .filter(t->t.getOgrcSayisi()>571)
+                .mapToInt(C10_University::getNotOrt)
+                .max();
+
+
+    }
+
+    public static long printmatbolsayısı(List<C10_University> unv){
+
+        return  unv.stream()
+                .filter(t->t.getBolum().equalsIgnoreCase("matematik"))
+               // .filter(t->t.getBolum().contains("mat"))
+                .count();
+
+    }
+    public static java.util.OptionalDouble printogrsayısı333byknotort(List<C10_University> unv){
+        return unv.stream().
+                filter(t->t.getOgrcSayisi()>333)
+                .mapToDouble(C10_University::getNotOrt)
+                .average();
+
+
+    }
+
+
+    public static int printnotort63denbykögrsysytoplam(List<C10_University> unv){
+        return unv.stream().
+                filter(t->t.getNotOrt()>63)
+                .mapToInt(C10_University::getOgrcSayisi)
+                .sum();
+
+
+    }
+
     public static List<C10_University> printNotOrtTersSiraIlk3(List<C10_University> unv){
         return unv
                 .stream()

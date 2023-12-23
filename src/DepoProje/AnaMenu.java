@@ -6,12 +6,13 @@ public class AnaMenu implements IAnaMenu {
     static String c_BLUE = "\u001B[34m";
     static String c_RED = "\u001B[31m";
     static String c_GREEN = "\u001B[32m";
+    Islemler yıslem = new Islemler();
 
 
-
-    public void varolanlar(){
+    public void varolanlar() {
 
     }
+
     public void anaekran() throws InterruptedException {
 
         System.out.println(BOLD + c_GREEN + "-----------------------");
@@ -71,14 +72,14 @@ public class AnaMenu implements IAnaMenu {
     }
 
     public void yetkiligirisi() {
- Islemler yıslem=new Islemler();
- yıslem.yetkili();
+
+        yıslem.yetkili();
 
     }
 
     public void musteriGirisi() {
 
-
+        yıslem.musteri();
     }
 
 
