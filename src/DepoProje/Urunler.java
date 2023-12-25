@@ -31,7 +31,7 @@ public class Urunler  {
     }
 
     public static void ekleUrunler() {
-        Urunler urun = new Urunler("Portakal", "İsrail", 50, "Kasa", "A1");
+        Urunler urun = new Urunler("Portakalagit status", "İsrail", 50, "Kasa", "A1");
         Urunler urun1 = new Urunler("Muz", "Türkiye", 34, "Kasa", "A1");
         Urunler urun3 = new Urunler("Patates", "Romanya", 99, "Çuval", "A2");
         depodakiürünler.put(1001, urun);//DAHA ÇOK ÜRÜN EKLEME

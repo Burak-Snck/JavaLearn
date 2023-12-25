@@ -172,7 +172,7 @@ public class Islemler extends Urunler{
     }
 
     public void musteri() {
-        System.out.println("Müşeteri İşlem Menüsü");
+        System.out.println("Müşteri İşlem Menüsü");
 
 
         System.out.println("Ürün Listeleme  1 ");
