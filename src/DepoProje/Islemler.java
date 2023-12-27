@@ -122,8 +122,10 @@ public class Islemler extends Urunler{
         System.out.println("Raf Giriniz : ");
         String raf=TryCatch.stringGirisi();
         Urunler urunler=new Urunler(  isim,  üretici, miktar,  birim,  raf);
-        Urunler.depodakiürünler.put(ıd,urunler);
-      ıd++;
+
+       int key = ıd++;
+        Urunler.depodakiürünler.put(key,urunler);
+
 
 
 

@@ -8,10 +8,10 @@ public class MeyveListesi {
         ArrayList<Meyve> meyveListesi = new ArrayList<>();
 
         // Meyve nesnelerini oluşturup ArrayList'e ekleme
-        Meyve elma = new Meyve("Elma","Almanya");
+        Meyve yanık= new Meyve("Elma","Almanya");
 
 
-        meyveListesi.add(elma);
+        meyveListesi.add(yanık);
 
 
         // ArrayList'teki meyve isimlerini yazdırma

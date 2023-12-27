@@ -56,15 +56,16 @@ public class Urunler  {
 
 
     public String getIsim() {
-        return isim;
+
+        return isim.toUpperCase();
     }
 
     public void setIsim(String isim) {
-        this.isim = isim;
+        this.isim= isim;
     }
 
     public String getÜretici() {
-        return üretici;
+        return üretici.toUpperCase();
     }
 
     public void setÜretici(String üretici) {
