@@ -9,7 +9,8 @@ public class C12_replace_replaceAll {
          */
         String str = "madem gelding dünyaya otor çalış JAVA'ya :) ";
         System.out.println("str = " + str);
-        System.out.println("str.replace(\"a\",\"*\") = " + str.replace("a", "*"));
+        String eklemeli=str.replace("a", "*");
+        System.out.println("eklemeli = " + eklemeli);
         System.out.println(str.replace("yaya", "para"));
         //char çalış
 

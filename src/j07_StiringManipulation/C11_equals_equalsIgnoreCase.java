@@ -25,6 +25,7 @@ public class C11_equals_equalsIgnoreCase {
         System.out.println("str1.equals(\"Mert\") = " + str1.equals("Mert"));// true
         System.out.println("str2.equals('a') = " + str2.equals('a'));// false
         System.out.println("str1.equalsIgnoreCase(str2) = " + str1.equalsIgnoreCase(str2));//  true
+        System.out.println("str1.equalsIgnoreCase(str2) = " + str1.equalsIgnoreCase(str2));
 
         // equals() ile == farkı....
         String s1 = "clarusway";// s1 String pool(string havuzundan aynı referans:adres'e sahip variable)->ön cep(stack memory)
